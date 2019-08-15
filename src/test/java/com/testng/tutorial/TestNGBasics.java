@@ -8,4 +8,9 @@ public class TestNGBasics {
     public void Demo() {
         System.out.println("Heya");
     }
+
+    @Test
+    public void otherDemo() {
+        System.out.println("Sup");
+    }
 }
