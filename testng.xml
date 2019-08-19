@@ -5,20 +5,30 @@
        parallel="tests"
        thread-count="2"
        configfailurepolicy="continue">
+    <!-- Tutorial module -->
     <test name="Tutorial"
           annotations="JDK"
           preserve-order="true">
         <classes>
-            <class name="com.testng.tutorial.TestNGBasics" />
+            <class name="com.testng.tutorial.TestNGBasics">
+                <methods>
+                    <include name="Demo" />
+                </methods>
+            </class>
             <class name="com.testng.tutorial.TestNGAdvanced" />
         </classes>
     </test>
+    <!-- Priority module -->
     <test name="Priority"
         annotations="JDK"
         preserve-order="true">
         <classes>
             <class name="com.testng.tutorial.TestNgPriority" />
-            <class name="com.testng.tutorial.TestNgPriority2" />
+            <class name="com.testng.tutorial.TestNgPriority2">
+                <methods>
+                    <exclude name="Api.*" />
+                </methods>
+            </class>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
